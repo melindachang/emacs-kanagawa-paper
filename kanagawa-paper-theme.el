@@ -5,100 +5,224 @@
 
 ;;; Customizations:
 
-(defgroup kanagawa-theme nil
-  "Kanagawa-theme options."
+(defgroup kanagawa-paper-theme nil
+  "kanagawa-paper-theme options."
   :group 'faces)
 
-(defcustom kanagawa-theme-comment-italic t
+(defcustom kanagawa-paper-theme-comment-italic t
   "Enable italics for comments and also disable background."
   :type 'boolean
-  :group 'kanagawa-theme)
+  :group 'kanagawa-paper-theme)
 
-(defcustom kanagawa-theme-keyword-italic t
+(defcustom kanagawa-paper-theme-keyword-italic t
   "Enable italics for keywords."
   :type 'boolean
-  :group 'kanagawa-theme)
+  :group 'kanagawa-paper-theme)
 
-(defcustom kanagawa-theme-org-height t
+(defcustom kanagawa-paper-theme-org-height t
   "Use varying text heights for org headings."
   :type 'boolean
-  :group 'kanagawa-theme)
+  :group 'kanagawa-paper-theme)
 
-(defcustom kanagawa-theme-org-bold t
+(defcustom kanagawa-paper-theme-org-bold t
   "Inherit text bold for org headings"
   :type 'boolean
-  :group 'kanagawa-theme)
+  :group 'kanagawa-paper-theme)
 
-(defcustom kanagawa-theme-org-priority-bold t
+(defcustom kanagawa-paper-theme-org-priority-bold t
   "Inherit text bold for priority items in agenda view"
   :type 'boolean
-  :group 'kanagawa-theme)
+  :group 'kanagawa-paper-theme)
 
-(defcustom kanagawa-theme-org-highlight nil
+(defcustom kanagawa-paper-theme-org-highlight nil
   "Highlight org headings."
   :type 'boolean
-  :group 'kanagawa-theme)
+  :group 'kanagawa-paper-theme)
 
-(defcustom kanagawa-theme-underline-parens t
+(defcustom kanagawa-paper-theme-underline-parens t
   "If non-nil, underline matching parens when using `show-paren-mode' or similar."
   :type 'boolean
-  :group 'kanagawa-theme)
+  :group 'kanagawa-paper-theme)
 
 (defun true-color-p ()
   (or (display-graphic-p)
       (= (tty-display-color-cells) 16777216)))
 
-(deftheme kanagawa "An elegant theme inspired by The Great Wave off Kanagawa by Katsushika Hokusa")
+(deftheme kanagawa-paper "A remixed Kanagawa with muted colors")
 
-(defconst kanagawa-dark-palette
-  `((fuji-white       ,(if (true-color-p) "#DCD7BA" "#ffffff"))
-    (old-white        ,(if (true-color-p) "#C8C093" "#ffffff"))
-    (sumi-ink-0       ,(if (true-color-p) "#16161D" "#000000"))
-    (sumi-ink-1b      ,(if (true-color-p) "#1f1f28" "#000000"))
-    (sumi-ink-1       ,(if (true-color-p) "#1F1F28" "#080808"))
-    (sumi-ink-2       ,(if (true-color-p) "#2A2A37" "#121212"))
-    (sumi-ink-3       ,(if (true-color-p) "#363646" "#303030"))
-    (sumi-ink-4       ,(if (true-color-p) "#54546D" "#303030"))
-    (wave-blue-1      ,(if (true-color-p) "#223249" "#4e4e4e"))
-    (wave-blue-2      ,(if (true-color-p) "#2D4F67" "#585858"))
-    (wave-aqua-1      ,(if (true-color-p) "#6A9589" "#6a9589"))
-    (wave-aqua-2      ,(if (true-color-p) "#7AA89F" "#717C7C"))
-    (winter-green     ,(if (true-color-p) "#2B3328" "#585858"))
-    (winter-yellow    ,(if (true-color-p) "#49443C" "#585858"))
-    (winter-red       ,(if (true-color-p) "#43242B" "#585858"))
-    (winter-blue      ,(if (true-color-p) "#252535" "#585858"))
-    (autumn-green     ,(if (true-color-p) "#76946A" "#585858"))
-    (autumn-red       ,(if (true-color-p) "#C34043" "#585858"))
-    (autumn-yellow    ,(if (true-color-p) "#DCA561" "#585858"))
-    (samurai-red      ,(if (true-color-p) "#E82424" "#585858"))
-    (ronin-yellow     ,(if (true-color-p) "#FF9E3B" "#585858"))
-    (dragon-blue      ,(if (true-color-p) "#658594" "#658594"))
-    (fuji-gray        ,(if (true-color-p) "#727169" "#717C7C"))
-    (spring-violet-1  ,(if (true-color-p) "#938AA9" "#717C7C"))
-    (oni-violet       ,(if (true-color-p) "#957FB8" "#717C7C"))
-    (crystal-blue     ,(if (true-color-p) "#7E9CD8" "#717C7C"))
-    (spring-violet-2  ,(if (true-color-p) "#9CABCA" "#717C7C"))
-    (spring-blue      ,(if (true-color-p) "#7FB4CA" "#717C7C"))
-    (light-blue       ,(if (true-color-p) "#A3D4D5" "#717C7C"))
-    (spring-green     ,(if (true-color-p) "#98BB6C" "#717C7C"))
-    (boat-yellow-1    ,(if (true-color-p) "#938056" "#717C7C"))
-    (boat-yellow-2    ,(if (true-color-p) "#C0A36E" "#717C7C"))
-    (carp-yellow      ,(if (true-color-p) "#E6C384" "#717C7C"))
-    (sakura-pink      ,(if (true-color-p) "#D27E99" "#717C7C"))
-    (wave-red         ,(if (true-color-p) "#E46876" "#717C7C"))
-    (peach-red        ,(if (true-color-p) "#FF5D62" "#717C7C"))
-    (surimi-orange    ,(if (true-color-p) "#FFA066" "#717C7C"))
-    (katana-gray      ,(if (true-color-p) "#717C7C" "#717C7C"))
-    (comet            ,(if (true-color-p) "#54536D" "#4e4e4e"))))
+(defconst kanagawa-paper-ink-palette
+  `((fuji-white      ,(if (true-color-p) "#DCD7BA" "#ffffff"))
+    (old-white       ,(if (true-color-p) "#C8C093" "#ffffff"))
+    (fuji-gray       ,(if (true-color-p) "#727169" "#717C7C"))
+    
+    (sumi-ink-n1     ,(if (true-color-p) "#0f0f15" "#000000"))
+    (sumi-ink-0      ,(if (true-color-p) "#16161D" "#000000"))
+    (sumi-ink-1      ,(if (true-color-p) "#181820" "#080808"))
+    (sumi-ink-2      ,(if (true-color-p) "#1a1a22" "#121212"))
+    (sumi-ink-3      ,(if (true-color-p) "#1f1f28" "#121212"))
+    (sumi-ink-4      ,(if (true-color-p) "#2a2a37" "#303030"))
+    (sumi-ink-5      ,(if (true-color-p) "#363646" "#303030"))
+    (sumi-ink-6      ,(if (true-color-p) "#54546d" "#303030"))
+    
+    (wave-blue-1     ,(if (true-color-p) "#223249" "#4e4e4e"))
+    (wave-blue-2     ,(if (true-color-p) "#2D4F67" "#585858"))
+    
+    (wave-aqua-1     ,(if (true-color-p) "#6A9589" "#6a9589"))
+    (wave-aqua-2     ,(if (true-color-p) "#7AA89F" "#717C7C"))
+    (winter-green    ,(if (true-color-p) "#2B3328" "#585858"))
+    (winter-yellow   ,(if (true-color-p) "#49443C" "#585858"))
+    (winter-red      ,(if (true-color-p) "#43242B" "#585858"))
+    (winter-blue     ,(if (true-color-p) "#252535" "#585858"))
+    (autumn-green    ,(if (true-color-p) "#76946A" "#585858"))
+    (autumn-red      ,(if (true-color-p) "#C34043" "#585858"))
+    (autumn-yellow   ,(if (true-color-p) "#DCA561" "#585858"))
+    
+    (samurai-red     ,(if (true-color-p) "#E82424" "#585858"))
+    (ronin-yellow    ,(if (true-color-p) "#FF9E3B" "#585858"))
+    (dragon-blue     ,(if (true-color-p) "#658594" "#658594"))
+    
+    (oni-violet      ,(if (true-color-p) "#957FB8" "#717C7C"))
+    (oni-violet-2    ,(if (true-color-p) "#b8b4d0" "#717C7C"))
+    (spring-violet-1 ,(if (true-color-p) "#938AA9" "#717C7C"))
+    (spring-violet-2 ,(if (true-color-p) "#9CABCA" "#717C7C"))
+    (spring-blue     ,(if (true-color-p) "#7FB4CA" "#717C7C"))
+    (crystal-blue    ,(if (true-color-p) "#7E9CD8" "#717C7C"))
+    (light-blue      ,(if (true-color-p) "#A3D4D5" "#717C7C"))
+    
+    (spring-green    ,(if (true-color-p) "#98BB6C" "#717C7C"))
+    (boat-yellow-1   ,(if (true-color-p) "#938056" "#717C7C"))
+    (boat-yellow-2   ,(if (true-color-p) "#C0A36E" "#717C7C"))
+    (carp-yellow     ,(if (true-color-p) "#E6C384" "#717C7C"))
+    
+    (sakura-pink     ,(if (true-color-p) "#D27E99" "#717C7C"))
+    (wave-red        ,(if (true-color-p) "#E46876" "#717C7C"))
+    (peach-red       ,(if (true-color-p) "#FF5D62" "#717C7C"))
+    (surimi-orange   ,(if (true-color-p) "#FFA066" "#717C7C"))
+    (katana-gray     ,(if (true-color-p) "#717C7C" "#717C7C"))
+    (comet           ,(if (true-color-p) "#54536D" "#4e4e4e"))
+    
+    (dragon-black-0  ,(if (true-color-p) "#0d0c0c" "#000000"))
+    (dragon-black-1  ,(if (true-color-p) "#12120f" "#000000"))
+    (dragon-black-2  ,(if (true-color-p) "#1d1c19" "#000000"))
+    (dragon-black-3  ,(if (true-color-p) "#181616" "#000000"))
+    (dragon-black-4  ,(if (true-color-p) "#282727" "#000000"))
+    (dragon-black-5  ,(if (true-color-p) "#393836" "#000000"))
+    (dragon-black-6  ,(if (true-color-p) "#625e5a" "#000000"))
+    
+    (dragon-white    ,(if (true-color-p) "#c5c9c5" "#ffffff"))
+    (dragon-green    ,(if (true-color-p) "#699469" "#ffffff"))
+    (dragon-green-2  ,(if (true-color-p) "#8a9a7b" "#ffffff"))
+    (dragon-pink     ,(if (true-color-p) "#a292a3" "#ffffff"))
+    (dragon-orange   ,(if (true-color-p) "#b6927b" "#ffffff"))
+    (dragon-orange-2 ,(if (true-color-p) "#b98d7b" "#ffffff"))
+    (dragon-gray     ,(if (true-color-p) "#a6a69c" "#ffffff"))
+    (dragon-gray-2   ,(if (true-color-p) "#9e9b93" "#ffffff"))
+    (dragon-gray-3   ,(if (true-color-p) "#7a8382" "#ffffff"))
+    (dragon-blue-2   ,(if (true-color-p) "#859fac" "#ffffff"))
+    (dragon-blue-3   ,(if (true-color-p) "#708e9e" "#ffffff"))
+    (dragon-blue-4   ,(if (true-color-p) "#5d7a88" "#ffffff"))
+    (dragon-blue-5   ,(if (true-color-p) "#435965" "#ffffff"))
+    (dragon-violet   ,(if (true-color-p) "#8992a7" "#ffffff"))
+    (dragon-red      ,(if (true-color-p) "#c4746e" "#ffffff"))
+    (dragon-aqua     ,(if (true-color-p) "#8ea49e" "#ffffff"))
+    (dragon-ash      ,(if (true-color-p)  "#737c73"  "#717C7C"))
+    (dragon-teal     ,(if (true-color-p)  "#949fb5"  "#717C7C"))
+    (dragon-yellow   ,(if (true-color-p)  "#c4b28a"  "#717C7C"))
+    
+    (lotus-ink-0     ,(if (true-color-p)  "#3d3d5e"  "#717C7C"))
+    (lotus-ink-1     ,(if (true-color-p)  "#545464"  "#717C7C"))
+    (lotus-ink-2     ,(if (true-color-p)  "#43436c"  "#717C7C"))
+    (lotus-gray      ,(if (true-color-p)  "#dcd7ba"  "#717C7C"))
+    (lotus-gray-2    ,(if (true-color-p)  "#716e61"  "#717C7C"))
+    (lotus-gray-3    ,(if (true-color-p)  "#8a8980"  "#717C7C"))
+    (lotus-white-0   ,(if (true-color-p)  "#d5cea3"  "#717C7C"))
+    (lotus-white-1   ,(if (true-color-p)  "#dcd5ac"  "#717C7C"))
+    (lotus-white-2   ,(if (true-color-p)  "#e5ddb0"  "#717C7C"))
+    (lotus-white-3   ,(if (true-color-p)  "#f2ecbc"  "#717C7C"))
+    (lotus-white-4   ,(if (true-color-p)  "#e7dba0"  "#717C7C"))
+    (lotus-white-5   ,(if (true-color-p)  "#e4d794"  "#717C7C"))
+    (lotus-violet-1  ,(if (true-color-p)  "#a09cac"  "#717C7C"))
+    (lotus-violet-2  ,(if (true-color-p)  "#766b90"  "#717C7C"))
+    (lotus-violet-3  ,(if (true-color-p)  "#c9cbd1"  "#717C7C"))
+    (lotus-violet-4  ,(if (true-color-p)  "#624c83"  "#717C7C"))
+    (lotus-blue-1    ,(if (true-color-p)  "#c7d7e0"  "#717C7C"))
+    (lotus-blue-2    ,(if (true-color-p)  "#b5cbd2"  "#717C7C"))
+    (lotus-blue-3    ,(if (true-color-p)  "#9fb5c9"  "#717C7C"))
+    (lotus-blue-4    ,(if (true-color-p)  "#4d699b"  "#717C7C"))
+    (lotus-blue-5    ,(if (true-color-p)  "#5d57a3"  "#717C7C"))
+    (lotus-green     ,(if (true-color-p)  "#6f894e"  "#717C7C"))
+    (lotus-green-2   ,(if (true-color-p)  "#6e915f"  "#717C7C"))
+    (lotus-green-3   ,(if (true-color-p)  "#b7d0ae"  "#717C7C"))
+    (lotus-pink      ,(if (true-color-p)  "#b35b79"  "#717C7C"))
+    (lotus-orange    ,(if (true-color-p)  "#cc6d00"  "#717C7C"))
+    (lotus-orange-2  ,(if (true-color-p)  "#e98a00"  "#717C7C"))
+    (lotus-yellow    ,(if (true-color-p)  "#77713f"  "#717C7C"))
+    (lotus-yellow-2  ,(if (true-color-p)  "#836f4a"  "#717C7C"))
+    (lotus-yellow-3  ,(if (true-color-p)  "#de9800"  "#717C7C"))
+    (lotus-yellow-4  ,(if (true-color-p)  "#f9d791"  "#717C7C"))
+    (lotus-red       ,(if (true-color-p)  "#c84053"  "#717C7C"))
+    (lotus-red-2     ,(if (true-color-p)  "#d7474b"  "#717C7C"))
+    (lotus-red-3     ,(if (true-color-p)  "#e82424"  "#717C7C"))
+    (lotus-red-4     ,(if (true-color-p)  "#d9a594"  "#717C7C"))
+    (lotus-aqua      ,(if (true-color-p)  "#597b75"  "#717C7C"))
+    (lotus-aqua-2    ,(if (true-color-p)  "#5e857a"  "#717C7C"))
+    (lotus-teal-1    ,(if (true-color-p)  "#4e8ca2"  "#717C7C"))
+    (lotus-teal-2    ,(if (true-color-p)  "#6693bf"  "#717C7C"))
+    (lotus-teal-3    ,(if (true-color-p)  "#5a7785"  "#717C7C"))
+    (lotus-cyan      ,(if (true-color-p)  "#d7e3d8"  "#717C7C"))
+    (canvas-aqua     ,(if (true-color-p)  "#57786c"  "#717C7C"))
+    (canvas-aqua-2   ,(if (true-color-p)  "#5f847c"  "#717C7C"))
+    (canvas-blue-1   ,(if (true-color-p)  "#93b5d0"  "#717C7C"))
+    (canvas-blue-2   ,(if (true-color-p)  "#719ac2"  "#717C7C"))
+    (canvas-blue-3   ,(if (true-color-p)  "#5c71a4"  "#717C7C"))
+    (canvas-blue-4   ,(if (true-color-p)  "#526994"  "#717C7C"))
+    (canvas-blue-5   ,(if (true-color-p)  "#515797"  "#717C7C"))
+    (canvas-cyan     ,(if (true-color-p)  "#56a06a"  "#717C7C"))
+    (canvas-gray-0   ,(if (true-color-p)  "#5d5c54"  "#717C7C"))
+    (canvas-gray-1   ,(if (true-color-p)  "#858479"  "#717C7C"))
+    (canvas-gray-2   ,(if (true-color-p)  "#a9a8a0"  "#717C7C"))
+    (canvas-gray-3   ,(if (true-color-p)  "#b5b5ae"  "#717C7C"))
+    (canvas-gray-4   ,(if (true-color-p)  "#c1c1bb"  "#717C7C"))
+    (canvas-green    ,(if (true-color-p)  "#73865b"  "#717C7C"))
+    (canvas-green-2  ,(if (true-color-p)  "#718e64"  "#717C7C"))
+    (canvas-green-3  ,(if (true-color-p)  "#a0c991"  "#717C7C"))
+    (canvas-ink-0    ,(if (true-color-p)  "#4c4c65"  "#717C7C"))
+    (canvas-ink-1    ,(if (true-color-p)  "#595b62"  "#717C7C"))
+    (canvas-ink-2    ,(if (true-color-p)  "#484862"  "#717C7C"))
+    (canvas-orange   ,(if (true-color-p)  "#b8805e"  "#717C7C"))
+    (canvas-orange-2 ,(if (true-color-p)  "#d59260"  "#717C7C"))
+    (canvas-pink     ,(if (true-color-p)  "#ac7085"  "#717C7C"))
+    (canvas-red      ,(if (true-color-p)  "#b35560"  "#717C7C"))
+    (canvas-red-2    ,(if (true-color-p)  "#c75758"  "#717C7C"))
+    (canvas-red-3    ,(if (true-color-p)  "#c95d5d"  "#717C7C"))
+    (canvas-red-4    ,(if (true-color-p)  "#d99a85"  "#717C7C"))
+    (canvas-teal-1   ,(if (true-color-p)  "#5f8a9b"  "#717C7C"))
+    (canvas-teal-2   ,(if (true-color-p)  "#618bb6"  "#717C7C"))
+    (canvas-teal-3   ,(if (true-color-p)  "#526c79"  "#717C7C"))
+    (canvas-violet-1 ,(if (true-color-p)  "#c4cbdc"  "#717C7C"))
+    (canvas-violet-2 ,(if (true-color-p)  "#a398bf"  "#717C7C"))
+    (canvas-violet-3 ,(if (true-color-p)  "#7967a2"  "#717C7C"))
+    (canvas-violet-4 ,(if (true-color-p)  "#6f4f9d"  "#717C7C"))
+    (canvas-white-0  ,(if (true-color-p)  "#cbc8bc"  "#717C7C"))
+    (canvas-white-1  ,(if (true-color-p)  "#d3d0c3"  "#717C7C"))
+    (canvas-white-2  ,(if (true-color-p)  "#d8d8d2"  "#717C7C"))
+    (canvas-white-3  ,(if (true-color-p)  "#e1e1de"  "#717C7C"))
+    (canvas-white-4  ,(if (true-color-p)  "#e6e6e3"  "#717C7C"))
+    (canvas-white-5  ,(if (true-color-p)  "#ecece8"  "#717C7C"))
+    (canvas-yellow   ,(if (true-color-p)  "#a67337"  "#717C7C"))
+    (canvas-yellow-2 ,(if (true-color-p)  "#c08a48"  "#717C7C"))
+    (canvas-yellow-3 ,(if (true-color-p)  "#d3a56b"  "#717C7C"))
+    (canvas-yellow-4 ,(if (true-color-p)  "#e0be6d"  "#717C7C"))
+    ))
 
-(defmacro define-kanagawa-dark-theme (theme &rest faces)
+(defmacro define-kanagawa-paper-ink-theme (theme &rest faces)
   `(let ((class '((class color) (min-colors 89)))
-         ,@kanagawa-dark-palette)
+         ,@kanagawa-paper-ink-palette)
      (custom-theme-set-faces
       ,theme
       ,@faces)))
 
-(define-kanagawa-dark-theme
+(define-kanagawa-paper-ink-theme
  'kanagawa
  `(default                                       ((,class (:background ,sumi-ink-1b :foreground ,fuji-white))))
  `(border                                        ((,class (:background ,sumi-ink-1b :foreground ,sumi-ink-0))))
@@ -122,9 +246,9 @@
  `(menu                                          ((,class (:background ,sumi-ink-0 :foreground ,fuji-white))))
  `(mode-line                                     ((,class (:background ,sumi-ink-0 :foreground ,fuji-white :weight bold))))
  `(mode-line-inactive                            ((,class (:background unspecified :foreground ,sumi-ink-4
-								       :box (:line-width 1 :color ,sumi-ink-2)))))
+								                                                       :box (:line-width 1 :color ,sumi-ink-2)))))
  `(mode-line-active                              ((,class (:background ,sumi-ink-0 :foreground ,old-white
-								       :box (:line-width 1 :color ,sumi-ink-3)))))
+								                                                       :box (:line-width 1 :color ,sumi-ink-3)))))
  `(mode-line-highlight                           ((,class (:foreground ,boat-yellow-1))))
  `(mode-line-buffer-id                           ((,class (:foreground ,wave-aqua-2 :weight bold))))
  `(numbers                                       ((,class (:background ,sakura-pink))))
@@ -142,7 +266,7 @@
  ;; Font lock
  `(font-lock-type-face                           ((,class (:foreground ,wave-aqua-2))))
  `(font-lock-regexp-grouping-backslash           ((,class (:foreground ,boat-yellow-1))))
- `(font-lock-keyword-face                        ((,class (:foreground ,oni-violet :slant ,(if kanagawa-theme-keyword-italic 'italic 'normal)))))
+ `(font-lock-keyword-face                        ((,class (:foreground ,oni-violet :slant ,(if kanagawa-paper-theme-keyword-italic 'italic 'normal)))))
  `(font-lock-warning-face                        ((,class (:foreground ,ronin-yellow))))
  `(font-lock-string-face                         ((,class (:foreground ,fuji-white :slant italic))))
  `(font-lock-builtin-face                        ((,class (:foreground ,spring-blue))))
@@ -151,8 +275,8 @@
  `(font-lock-function-name-face                  ((,class (:foreground ,crystal-blue))))
  `(font-lock-variable-name-face                  ((,class (:foreground ,crystal-blue))))
  `(font-lock-negation-char-face                  ((,class (:foreground ,peach-red))))
- `(font-lock-comment-face                        ((,class (:foreground ,fuji-gray :slant ,(if kanagawa-theme-keyword-italic 'italic 'normal)))))
- `(font-lock-comment-delimiter-face              ((,class (:foreground ,fuji-gray :slant ,(if kanagawa-theme-keyword-italic 'italic 'normal)))))
+ `(font-lock-comment-face                        ((,class (:foreground ,fuji-gray :slant ,(if kanagawa-paper-theme-keyword-italic 'italic 'normal)))))
+ `(font-lock-comment-delimiter-face              ((,class (:foreground ,fuji-gray :slant ,(if kanagawa-paper-theme-keyword-italic 'italic 'normal)))))
  `(font-lock-doc-face                            ((,class (:foreground ,comet))))
  `(font-lock-doc-markup-face                     ((,class (:foreground ,comet))))
  `(font-lock-preprocessor-face                   ((,class (:foreground ,boat-yellow-1))))
@@ -219,7 +343,7 @@
  ;; org-mode
  `(org-done                                      ((,class (:foreground ,dragon-blue))))
  `(org-code                                      ((,class (:background ,sumi-ink-0
-								       :foreground ,fuji-gray))))
+								                                                       :foreground ,fuji-gray))))
  `(org-meta-line                                 ((,class (:background ,winter-green :foreground ,spring-green))))
  `(org-block                                     ((,class (:background ,winter-blue :foreground ,fuji-white))))
  `(org-block-begin-line                          ((,class (:background ,winter-blue :foreground ,spring-blue))))
@@ -233,15 +357,15 @@
  `(org-hide                                      ((,class (:background ,sumi-ink-1b :foreground ,sumi-ink-1b))))
  `(org-date                                      ((,class (:foreground ,wave-blue-2))))
  `(org-ellipsis                                  ((,class (:foreground ,wave-blue-2 :weight bold))))
- `(org-level-1                                   ((,class (:inherit bold :foreground ,peach-red :height ,(if kanagawa-theme-org-height 1.4 1.0) :weight ,(if kanagawa-theme-org-bold 'unspecified 'normal)))))
- `(org-level-2                                   ((,class (:inherit bold :foreground ,spring-violet-2 :height ,(if kanagawa-theme-org-height 1.3 1.0) :weight ,(if kanagawa-theme-org-bold 'unspecified 'normal)))))
- `(org-level-3                                   ((,class (:foreground ,boat-yellow-1 :height ,(if kanagawa-theme-org-height 1.2 1.0)))))
- `(org-level-4                                   ((,class (:foreground ,peach-red :height ,(if kanagawa-theme-org-height 1.1 1.0)))))
- `(org-level-5                                   ((,class (:foreground ,spring-violet-2 :height ,(if kanagawa-theme-org-height 1.1 1.0)))))
- `(org-level-6                                   ((,class (:foreground ,boat-yellow-1 :height ,(if kanagawa-theme-org-height 1.1 1.0)))))
- `(org-level-7                                   ((,class (:foreground ,peach-red :height ,(if kanagawa-theme-org-height 1.1 1.0)))))
- `(org-level-8                                   ((,class (:foreground ,spring-violet-2 :height ,(if kanagawa-theme-org-height 1.1 1.0)))))
- `(org-priority                                  ((,class (:foreground ,boat-yellow-1 :inherit bold :weight ,(if kanagawa-theme-org-priority-bold 'unspecified 'normal)))))
+ `(org-level-1                                   ((,class (:inherit bold :foreground ,peach-red :height ,(if kanagawa-paper-theme-org-height 1.4 1.0) :weight ,(if kanagawa-paper-theme-org-bold 'unspecified 'normal)))))
+ `(org-level-2                                   ((,class (:inherit bold :foreground ,spring-violet-2 :height ,(if kanagawa-paper-theme-org-height 1.3 1.0) :weight ,(if kanagawa-paper-theme-org-bold 'unspecified 'normal)))))
+ `(org-level-3                                   ((,class (:foreground ,boat-yellow-1 :height ,(if kanagawa-paper-theme-org-height 1.2 1.0)))))
+ `(org-level-4                                   ((,class (:foreground ,peach-red :height ,(if kanagawa-paper-theme-org-height 1.1 1.0)))))
+ `(org-level-5                                   ((,class (:foreground ,spring-violet-2 :height ,(if kanagawa-paper-theme-org-height 1.1 1.0)))))
+ `(org-level-6                                   ((,class (:foreground ,boat-yellow-1 :height ,(if kanagawa-paper-theme-org-height 1.1 1.0)))))
+ `(org-level-7                                   ((,class (:foreground ,peach-red :height ,(if kanagawa-paper-theme-org-height 1.1 1.0)))))
+ `(org-level-8                                   ((,class (:foreground ,spring-violet-2 :height ,(if kanagawa-paper-theme-org-height 1.1 1.0)))))
+ `(org-priority                                  ((,class (:foreground ,boat-yellow-1 :inherit bold :weight ,(if kanagawa-paper-theme-org-priority-bold 'unspecified 'normal)))))
 
  ;; imenu
  `(imenu-list-entry-face                         ((,class (:foreground ,fuji-white))))
@@ -296,9 +420,9 @@
  `(rainbow-delimiters-depth-9-face               ((,class (:foreground ,spring-violet-2))))
 
  ;; show-paren
- `(show-paren-match                              ((,class (:background ,wave-aqua-1 :foreground ,sumi-ink-0 :weight bold :underline ,(when kanagawa-theme-underline-parens t)))))
+ `(show-paren-match                              ((,class (:background ,wave-aqua-1 :foreground ,sumi-ink-0 :weight bold :underline ,(when kanagawa-paper-theme-underline-parens t)))))
  `(show-paren-match-expression                   ((,class (:background ,wave-aqua-1 :foreground ,sumi-ink-0 :weight bold))))
- `(show-paren-mismatch                           ((,class (:background ,peach-red :foreground ,old-white :underline ,(when kanagawa-theme-underline-parens t)))))
+ `(show-paren-mismatch                           ((,class (:background ,peach-red :foreground ,old-white :underline ,(when kanagawa-paper-theme-underline-parens t)))))
  `(tooltip                                       ((,class (:foreground ,light-blue :background ,sumi-ink-0 :weight bold))))
 
  ;; company-box
@@ -474,7 +598,7 @@
  `(completions-annotations                       ((,class (:background unspecified :foreground ,dragon-blue :slant italic))))
  `(marginalia-file-priv-no                       ((,class (:background unspecified))))
 
-  ;; hydra
+ ;; hydra
  `(hydra-face-amaranth                           ((,class (:foreground ,autumn-red))))
  `(hydra-face-blue                               ((,class (:foreground ,spring-blue))))
  `(hydra-face-pink                               ((,class (:foreground ,sakura-pink))))
@@ -516,8 +640,6 @@
  `(diff-hl-margin-change                         ((,class (:foreground ,spring-blue :background ,winter-blue))))
  `(diff-hl-margin-delete                         ((,class (:foreground ,peach-red :background ,winter-red))))
  `(diff-hl-margin-insert                         ((,class (:foreground ,comet :background ,winter-blue))))
-
-
 
  `(bm-fringe-face                                ((,class (:background ,peach-red :foreground ,sumi-ink-3))))
  `(bm-fringe-persistent-face                     ((,class (:background ,peach-red :foreground ,sumi-ink-3))))
