@@ -1,0 +1,4 @@
+* Kanagawa Paper for Emacs
+
+Emacs iteration of [[https://github.com/thesimonho/kanagawa-paper.nvim][kanagawa-paper.nvim]], a remixed Kanagawa with muted
+colors. Uses [[https://github.com/zikajk/emacs-kanagawa-theme?tab=readme-ov-file][zikajk/emacs-kanagawa-theme]] as a base.
