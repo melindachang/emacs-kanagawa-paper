@@ -224,7 +224,7 @@
       ,@faces)))
 
 (define-kanagawa-paper-ink-theme
- 'kanagawa
+ 'kanagawa-paper
  `(default                                       ((,class (:background ,sumi-ink-3 :foreground ,fuji-white))))
  `(border                                        ((,class (:background ,sumi-ink-3 :foreground ,dragon-black-6))))
  `(button                                        ((,class (:foreground ,dragon-aqua))))
