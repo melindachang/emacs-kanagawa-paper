@@ -52,7 +52,7 @@
   :type 'boolean
   :group 'kanagawa-paper-theme)
 
-(defcustom kanagawa-paper-theme-org-height t
+(defcustom kanagawa-paper-theme-org-height nil
   "Use varying text heights for org headings."
   :type 'boolean
   :group 'kanagawa-paper-theme)
