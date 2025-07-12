@@ -1,3 +1,36 @@
+;;; kanagawa-paper-theme.el --- Kanagawa Paper for Emacs -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2025 Melinda Chang
+;; Copyright (C) 2025 Melinda Chang <melindachang.hy@gmail.com>
+
+;; Author: Melinda Chang <melindachang.hy@gmail.com>
+;; URL: https://codeberg.org/melindachang/emacs-kanagawa-paper
+;; Version: 1.0.0
+;; Package-Requires: ((emacs "24.3"))
+;; Created: 12 July 2025
+;; Keywords: themes faces
+
+;; This file is not part of GNU Emacs.
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;;; This is an Emacs port of Kanagawa Paper, a muted remix of
+;;; Kanagawa. For more information, see the source repo at
+;;; https://github.com/thesimonho/kanagawa-paper.nvim.
+
 ;;; Code:
 
 (unless (>= emacs-major-version 24)
@@ -717,4 +750,4 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'kanagawa)
+(provide-theme 'kanagawa-paper)
