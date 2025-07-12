@@ -587,7 +587,7 @@
  `(term-color-bright-green                       ((,class (:inherit term-color-green))))
  `(term-color-black                              ((,class (:background ,sumi-ink-0 :foreground ,fuji-white))))
  ;; NOTE - has effect on vterm as well so vterm specific settings bellow doesn't do much.
- `(term-color-bright-black                       ((,class (:background ,sumi-ink-1b :foreground ,fuji-gray))))
+ `(term-color-bright-black                       ((,class (:background ,sumi-ink-3 :foreground ,fuji-gray))))
  `(term-color-white                              ((,class (:background ,fuji-white :foreground ,fuji-white))))
  `(term-color-bright-white                       ((,class (:background ,old-white :foreground ,old-white))))
  `(term-color-red                                ((,class (:background ,peach-red :foreground ,peach-red))))
@@ -645,14 +645,14 @@
 
  ;; tab-bar
  `(tab-bar                                       ((,class (:background ,sumi-ink-0))))
- `(tab-bar-tab                                   ((,class (:background ,sumi-ink-1b :foreground ,fuji-white))))
+ `(tab-bar-tab                                   ((,class (:background ,sumi-ink-3 :foreground ,fuji-white))))
  `(tab-bar-tab-inactive                          ((,class (:background ,sumi-ink-0 :foreground ,sumi-ink-4 :height 0.8))))
 
  ;; centaur-tabs
  `(centaur-tabs-active-bar-face                  ((,class (:background ,spring-blue :foreground ,fuji-white))))
- `(centaur-tabs-selected                         ((,class (:background ,sumi-ink-1b :foreground ,fuji-white :weight bold))))
- `(centaur-tabs-selected-modified                ((,class (:background ,sumi-ink-1b :foreground ,fuji-white))))
- `(centaur-tabs-modified-marker-selected         ((,class (:background ,sumi-ink-1b :foreground ,autumn-yellow))))
+ `(centaur-tabs-selected                         ((,class (:background ,sumi-ink-3 :foreground ,fuji-white :weight bold))))
+ `(centaur-tabs-selected-modified                ((,class (:background ,sumi-ink-3 :foreground ,fuji-white))))
+ `(centaur-tabs-modified-marker-selected         ((,class (:background ,sumi-ink-3 :foreground ,autumn-yellow))))
  `(centaur-tabs-close-selected                   ((,class (:inherit centaur-tabs-selected))))
  `(tab-line                                      ((,class (:background ,sumi-ink-0))))
 
