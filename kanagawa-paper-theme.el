@@ -465,12 +465,12 @@
 
  ;; company-box
  `(company-tooltip                               ((,class (:background ,sumi-ink-4))))
- `(company-tooltip-common                        ((,class (:foreground ,unspecified))))
+ `(company-tooltip-common                        ((,class (:foreground unspecified))))
  `(company-tooltip-quick-access                  ((,class (:foreground ,fuji-white))))
  `(company-tooltip-scrollbar-thumb               ((,class (:background ,sumi-ink-6))))
  `(company-tooltip-scrollbar-track               ((,class (:background ,sumi-ink-4))))
  `(company-tooltip-search                        ((,class (:background ,spring-violet-1 :foreground ,dragon-black-2 :distant-foreground ,fuji-white))))
- `(company-tooltip-selection                     ((,class (:background ,sumi-ink-4 :foreground ,unspecified :weight bold))))
+ `(company-tooltip-selection                     ((,class (:background ,sumi-ink-4 :foreground unspecified :weight bold))))
  `(company-tooltip-mouse                         ((,class (:background ,sumi-ink-4 :foreground ,dragon-black-2 :distant-foreground ,fuji-white))))
  `(company-tooltip-annotation                    ((,class (:foreground ,dragon-aqua :distant-foreground ,dragon-aqua))))
  `(company-scrollbar-bg                          ((,class (:inherit tooltip))))
@@ -668,13 +668,13 @@
  `(git-gutter:modified                           ((,class (:foreground ,dragon-blue))))
 
  ;; diff-hl
- `(diff-hl-change                               ((,class (:foreground ,unspecified :background ,dragon-yellow))))
- `(diff-hl-delete                               ((,class (:foreground ,unspecified :background ,dragon-red))))
- `(diff-hl-insert                               ((,class (:foreground ,unspecified :background ,dragon-green))))
+ `(diff-hl-change                               ((,class (:foreground unspecified :background ,dragon-yellow))))
+ `(diff-hl-delete                               ((,class (:foreground unspecified :background ,dragon-red))))
+ `(diff-hl-insert                               ((,class (:foreground unspecified :background ,dragon-green))))
 
- `(diff-hl-margin-change                         ((,class (:foreground ,unspecified :background ,dragon-yellow))))
- `(diff-hl-margin-delete                         ((,class (:foreground ,unspecified :background ,dragon-red))))
- `(diff-hl-margin-insert                         ((,class (:foreground ,unspecified :background ,dragon-green))))
+ `(diff-hl-margin-change                         ((,class (:foreground unspecified :background ,dragon-yellow))))
+ `(diff-hl-margin-delete                         ((,class (:foreground unspecified :background ,dragon-red))))
+ `(diff-hl-margin-insert                         ((,class (:foreground unspecified :background ,dragon-green))))
 
  ;; `(bm-fringe-face                                ((,class (:background ,peach-red :foreground ,sumi-ink-3))))
  ;; `(bm-fringe-persistent-face                     ((,class (:background ,peach-red :foreground ,sumi-ink-3))))
@@ -718,7 +718,7 @@
  ;; `(tree-sitter-hl-face:type.parameter            ((,class (:foreground ,surimi-orange))))
  ;; `(tree-sitter-hl-face:type.super                ((,class (:foreground ,samurai-red :weight bold))))
 
- `(tree-sitter-hl-face:variable                  ((,class (:foreground ,unspecified))))
+ `(tree-sitter-hl-face:variable                  ((,class (:foreground unspecified))))
  `(tree-sitter-hl-face:variable.builtin          ((,class (:foreground ,dragon-orange :slant italic))))
  `(tree-sitter-hl-face:variable.parameter        ((,class (:foreground ,dragon-gray))))
  `(tree-sitter-hl-face:variable.special          ((,class (:foreground ,dragon-aqua))))
