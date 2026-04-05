@@ -520,10 +520,12 @@ names to which it refers are bound."
 ;;;;;;; org-mode
       (org-done (:foreground ,diag-info))
       (org-code (:background ,bg-m3))
-      (org-meta-line (:foreground ,diag-ok :background ,diff-add))
+      (org-meta-line (:foreground ,diag-ok))
       (org-block (:foreground ,fg :background ,bg))
       (org-block-begin-line (:foreground ,bright-blue :background ,diff-change))
       (org-block-end-line (:foreground ,extend-color-2 :background ,diff-delete))
+      (org-document-title (:foreground ,cyan))
+      (org-document-info (:foreground ,cyan))
       (org-headline-done (:foreground ,diag-info :strike-through t))
       (org-todo (:foreground ,extend-color-1 :weight bold))
       (org-headline-todo (:foreground ,bg-m1))
@@ -536,7 +538,7 @@ names to which it refers are bound."
       (org-level-1 (:foreground ,magenta
                                 :height ,(if kanagawa-paper-themes-org-height 1.3 1.0)
                                 :weight ,(if kanagawa-paper-themes-org-bold 'bold 'normal)))
-      (org-level-2 (:foreground ,blue
+      (org-level-2 (:foreground ,bright-blue
                                 :height ,(if kanagawa-paper-themes-org-height 1.2 1.0)
                                 :weight ,(if kanagawa-paper-themes-org-bold 'bold 'normal)))
       (org-level-3 (:foreground ,bright-cyan :height ,(if kanagawa-paper-themes-org-height 1.1 1.0)))
